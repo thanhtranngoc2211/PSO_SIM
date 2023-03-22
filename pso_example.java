@@ -143,6 +143,7 @@ public class pso_example {
 			            particleVelocity[j] = (int) (inertiaWeight * particleVelocity[j] + cognitiveComponent + socialComponent);
 			            particleVelocity[j] = Math.max(particleVelocity[j], (int) velocityLowerBounds[j]);
 			            particleVelocity[j] = Math.min(particleVelocity[j], (int) velocityUpperBounds[j]);
+						System.out.println("Velocity: " + particleVelocity[j]);
 			            particlePosition[j] += particleVelocity[j];
 			            particlePosition[j] = Math.max(particlePosition[j], 0);
 			            particlePosition[j] = Math.min(particlePosition[j], numVms - 1);
